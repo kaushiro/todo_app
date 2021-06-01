@@ -6,10 +6,16 @@ import { NavListItemStyled } from "./styles";
 interface IProps {
   link: string;
   exact?: boolean;
+  testId?: string;
 }
-const NavigationItem: React.FC<IProps> = ({ link, exact, children }) => (
+const NavigationItem: React.FC<IProps> = ({
+  link,
+  exact,
+  children,
+  testId,
+}) => (
   <NavListItemStyled>
-    <NavLink to={link} exact={exact}>
+    <NavLink to={link} exact={exact} data-testid={`link-${testId}`}>
       {children}
     </NavLink>
   </NavListItemStyled>

@@ -6,8 +6,8 @@ import messages from "./messages";
 
 const NavigationItems: React.FC = () => (
   <NavigationItemsStyled className="NavigationItems">
-    <NavigationItem link="/todos">
-      {messages.boardLink.defaultMessage}
+    <NavigationItem link="/todos" testId="todos">
+      {messages.listLink.defaultMessage}
     </NavigationItem>
   </NavigationItemsStyled>
 );

@@ -4,8 +4,13 @@ import { TodoContext } from "../../../../context/TodoContext";
 import * as actions from "../../../../store/actions/index";
 import Button from "../../../UI/Button";
 
-import { ListItemStyled, ListDescriptionStyled } from "./styles";
+import {
+  ListItemStyled,
+  ListDescriptionStyled,
+  ListItemButtonsStyled,
+} from "./styles";
 import Checkbox from "./components/Checkbox";
+
 interface IProps {
   id: string;
   isChecked?: boolean;
@@ -28,8 +33,18 @@ const ListItem: React.FC<IProps> = ({ id, isChecked, time, description }) => {
       <ListDescriptionStyled
         isChecked={checked}
       >{`${description} created: ${time}`}</ListDescriptionStyled>
-      <Button onClick={() => onDeleteTodo(id)} text={"Delete"} />
-      <Checkbox isChecked={isChecked} onClick={() => onCheckTodo(id)} />
+      <ListItemButtonsStyled>
+        <Button
+          onClick={() => onDeleteTodo(id)}
+          text={"Delete"}
+          testId={`delete-${id}`}
+        />
+        <Checkbox
+          isChecked={isChecked}
+          listItemId={id}
+          onClick={() => onCheckTodo(id)}
+        />
+      </ListItemButtonsStyled>
     </ListItemStyled>
   );
 };

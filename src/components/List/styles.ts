@@ -4,27 +4,23 @@ export const OrderedListStyled = styled.ol`
   display: flex;
   flex-direction: column;
   counter-reset: section;
-  width:95%;
+  width: 95%;
   padding: 0 2rem;
   list-style-position: inside;
   li:before {
     counter-increment: section;
     content: counter(section) ".";
-    margin: 0 0.5rem; 
+    margin: 1rem;
   }
 
   li {
+    width: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid grey;
+    margin: 0 auto;
+    border: 1px solid #ccc;
     &:not(:first-child) {
       border-top: none;
     }
-}
   }
-  li button {
-    display: flex;
-    justify-content: flex-end;
-  }
-
 `;

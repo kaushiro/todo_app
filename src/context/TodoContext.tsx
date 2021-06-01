@@ -18,7 +18,7 @@ export interface IContextModel {
   dispatch?: React.Dispatch<any>;
 }
 
-const NewTodoDefaultValue: ICounterState = {
+export const NewTodoDefaultValue: ICounterState = {
   todos: [],
   loading: true,
   error: null,
@@ -28,7 +28,6 @@ export const TodoContext = createContext({} as IContextModel);
 
 const NewTodoProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(todoReducer, NewTodoDefaultValue);
-  console.log(state);
   const [, setSortedState] = useState(state);
 
   useEffect(() => {
@@ -37,7 +36,6 @@ const NewTodoProvider: React.FC = ({ children }) => {
     );
     const updatedState = { todos: updatedTodos, loading: false, error: null };
     setSortedState(updatedState);
-    console.log(state);
   }, [state]);
 
   return (

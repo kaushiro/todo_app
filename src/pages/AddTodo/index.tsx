@@ -103,6 +103,7 @@ const AddTodo: React.FC = () => {
       shouldValidate={formElement.config.validation}
       touched={formElement.config.touched}
       changed={(event: any) => inputChangedHandler(event, formElement.id)}
+      testId={"add-todo"}
     />
   ));
   return (
@@ -114,6 +115,7 @@ const AddTodo: React.FC = () => {
           onClick={onAddTodo}
           btnType="Success"
           text={messages.addTodo.defaultMessage}
+          testId={"add-todo"}
         />
       </SubmitButtonWrapperStyled>
     </form>

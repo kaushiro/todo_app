@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import ListItem from "./components/ListItem";
 import { OrderedListStyled } from "./styles";
@@ -8,14 +8,6 @@ interface IProps {
   list: GenericObject[];
 }
 const List: React.FC<IProps> = ({ list }) => {
-  // const [orderedList,setOrderedList] =  useState([])
-  // useEffect(() => {
-  //   list.map((item) =>
-  //   item.isChecked ? setOrderedList.push(item) : f.isChecked ? -1 : 1
-  //   );
-  // }, [list]);
-  // console.log(list);
-
   return (
     <OrderedListStyled>
       {list &&

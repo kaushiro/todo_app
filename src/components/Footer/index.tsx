@@ -8,38 +8,38 @@ import {
   FooterLinksStyled,
 } from "./styles";
 
-const Footer = () => {
-  const links = [
-    {
-      href: "https://www.linkedin.com/in/kaushiro",
-      text: messages.linkedIn.defaultMessage,
-      target: "_blank",
-      rel: "external",
-    },
-    {
-      href: "https://github.com/kaushiro",
-      text: messages.gitHub.defaultMessage,
-      target: "_blank",
-      rel: "external",
-    },
-    {
-      href: "https://codesandbox.io/u/kaushiro",
-      text: messages.codeSandBox.defaultMessage,
-      target: "_blank",
-      rel: "external",
-    },
-    {
-      href: "https://codepen.io/kaushiro",
-      text: messages.codePen.defaultMessage,
-      target: "_blank",
-      rel: "external",
-    },
-  ];
+export const links = [
+  {
+    href: "https://www.linkedin.com/in/kaushiro",
+    text: messages.linkedIn.defaultMessage,
+    target: "_blank",
+    rel: "external",
+  },
+  {
+    href: "https://github.com/kaushiro",
+    text: messages.gitHub.defaultMessage,
+    target: "_blank",
+    rel: "external",
+  },
+  {
+    href: "https://codesandbox.io/u/kaushiro",
+    text: messages.codeSandBox.defaultMessage,
+    target: "_blank",
+    rel: "external",
+  },
+  {
+    href: "https://codepen.io/kaushiro",
+    text: messages.codePen.defaultMessage,
+    target: "_blank",
+    rel: "external",
+  },
+];
 
+const Footer = () => {
   return (
     <FooterWrapperStyled className="main-footer">
       <FooterRowContainerStyled>
-        {/* <Clock format={"HH:mm:ss"} ticking={true} timezone={"	Europe/London"} /> */}
+        <Clock format={"HH:mm:ss"} ticking={true} timezone={"	Europe/London"} />
         <p>{messages.appDescription.defaultMessage}</p>
       </FooterRowContainerStyled>
       <FooterRowContainerStyled>

@@ -22,7 +22,7 @@ export const FooterWrapperStyled = styled.footer`
 
   ${FooterRowContainerStyled}:last-child {
     @media (max-width: ${MAX_WIDTH_FOR_MOBILE_MENU - 1}px) {
-      margin-bottom: 5rem; /* Should clear the mobile nav height */
+      margin-bottom: 5rem;
     }
   }
 `;
@@ -47,8 +47,4 @@ export const FooterLinksStyled = styled.ul`
       display: inline;
     }
   }
-`;
-
-export const StyledSmallTextStyled = styled.p`
-  color: "#0059a5;
 `;

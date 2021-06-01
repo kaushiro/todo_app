@@ -10,7 +10,7 @@ export const AddTodoStyled = styled.div`
 `;
 export const SubmitButtonWrapperStyled = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 `;
 export const ButtonStyled = styled(Button)`

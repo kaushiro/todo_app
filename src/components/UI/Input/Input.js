@@ -26,6 +26,7 @@ const input = (props) => {
           {...props.elementConfig}
           value={props.value}
           onChange={props.changed}
+          data-testid={`input-${props.testId}`}
         />
       );
       break;
